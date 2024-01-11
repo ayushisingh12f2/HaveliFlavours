@@ -5,12 +5,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Meet Our Team</h2>
+                        <h2>Meet Our Chef</h2>
                     </div>
-                    <div class="col-12">
-                        <a href="/">Home</a>
-                        <a href="{% url 'team' %}">Team</a>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -22,7 +19,7 @@
             <div class="container">
                 <div class="section-header text-center">
                     <p>Our Team</p>
-                    <h2>Our Team Members ({{team_members|length}})</h2>
+                    <h2>Our Reputed Culinarians </h2>
                 </div>
                 <div class="row">
                 {% for m in team_members %}
@@ -40,7 +37,7 @@
                             <div class="team-text">
                                 <h2>{{m.name}}</h2>
                                 <p>{{m.designation}}</p>
-                                <p><small>Member Since: {{m.added_on}}</small></p>
+                                <p><small>Member Since: Jan 2024</small></p>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from myapp.models import Contact, Dish, Team, Category, Profile, Order
+from myapp.models import Contact, Dish, Team, Category, Profile, Order, Book_Table
 from django.http import HttpResponse,JsonResponse, HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
@@ -38,6 +38,23 @@ def contact_us(request):
 
 def about(request):
     return render(request,'about.html')
+
+def booking(request):
+    context={}
+    if request.method=="POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        mob = request.POST.get("phone")
+        date = request.POST.get("date")
+        time = request.POST.get("time")
+        guests = request.POST.get("guests")
+        
+        obj = Book_Table(name=name, email=email, mob=mob, date=date,time=time, number_guests=guests)
+        obj.save()
+        context['message']=f"Thanks for Booking a seat with us!! Delighted to serve you!!"
+
+
+    return render(request,'booking.html',context)
 
 def team_members(request):
     context={}
@@ -98,7 +115,7 @@ def signin(request):
             login(request, check_user)
             if check_user.is_superuser or check_user.is_staff:
                 return HttpResponseRedirect('/admin')
-            return HttpResponseRedirect('/dashboard')
+            return HttpResponseRedirect('/')
         else:
             context.update({'message':'Invalid Login Details!','class':'alert-danger'})
 

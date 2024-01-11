@@ -1,5 +1,5 @@
 from django.contrib import admin
-from myapp.models import Contact, Category, Team, Dish, Profile,Order
+from myapp.models import Contact, Category, Team, Dish, Profile,Order,Book_Table
 
 admin.site.site_header = "FoodZone | Admin"
 
@@ -22,3 +22,4 @@ admin.site.register(Team, TeamAdmin )
 admin.site.register(Dish, DishAdmin )
 admin.site.register(Profile)
 admin.site.register(Order)
+admin.site.register(Book_Table)

@@ -36,9 +36,9 @@
                     </p>
                     <h4 class="menu-text" style="font-weight: normal;">
                         {% if i.price != i.discounted_price %}
-                            <strong><del>&dollar;{{i.price}}</del></strong>
+                            <strong><del>&#x20B9;{{i.price}}</del></strong>
                         {% endif %}
-                            <strong>&dollar;{{i.discounted_price}}</strong>
+                            <strong>&#x20B9;{{i.discounted_price}}</strong>
                     </h4>
                     <p>
                         <script>
@@ -49,7 +49,7 @@
                         </script>
                     </p>
                     {% if i.is_available %}
-                    <a href="{% url 'dish' id=i.id %}">Order Now</a>
+                    <a href="{% url 'dish' id=i.id %}" style="color: #719a0a;">Order Now</a>
                     {% else %}
                         <p class="text-danger">Not Available for delivery!</p>
                     {% endif %}

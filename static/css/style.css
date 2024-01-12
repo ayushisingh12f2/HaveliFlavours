@@ -928,6 +928,7 @@ a:focus {
     display: block;
     font-size: 22px;
     font-weight: 700;
+    color: #719a0a;
 }
 
 .menu .menu-text h3::after {
@@ -939,6 +940,7 @@ a:focus {
     left: 0;
     border-top: 2px dotted #cccccc;
     z-index: -1;
+    color: #719a0a;
 }
 
 .menu .menu-text h3 span {
@@ -946,6 +948,7 @@ a:focus {
     float: left;
     padding-right: 5px;
     background: #ffffff;
+    color: #719a0a;
 }
 
 .menu .menu-text h3 strong {
@@ -972,19 +975,23 @@ a:focus {
         float: none;
         padding: 0;
         margin: 0;
+        color: #719a0a;
     }
     
     .menu .menu-text h3 {
         font-size: 18px;
         margin-bottom: 0;
+        color: #719a0a;
     }
     
     .menu .menu-text h3 span {
         margin-bottom: 3px;
+        color: #719a0a;
     }
     
     .menu .menu-text h3::after {
         display: none;
+        color: #719a0a;
     }
 }
 

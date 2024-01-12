@@ -23,6 +23,9 @@
    #signup{
        background:#719a0a;
    }
+   .body{
+    background-image: url("static/auth/images/foodbg.jpg");
+   }
 </style>
 {% endblock %}
 
@@ -39,8 +42,10 @@
     alert('{{error}}');
 </script>
 {% endif %}
-<div class="main">
+<body>
+<div class="main" style="background-image: url(https://wallpaperbat.com/img/684881-india-food-wallpaper-top-free-india-food-background.jpg);">
 <!-- Sign up form -->
+
 <section class="signup" style="padding-top:100px;">
     <div class="container main-container p-0">
         <div class="signup-content">
@@ -72,17 +77,19 @@
                     </div>
                     <div class="form-group form-button">
                         <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                        <a href="{% url 'login' %}" class="form-submit" >I am already member</a>
+
                     </div>
                 </form>
             </div>
-            <div class="signup-image">
-                <figure><img src="/static/auth/images/signup-image.jpg" alt="sing up image"></figure>
-                <a href="{% url 'login' %}" class="signup-image-link">I am already member</a>
-            </div>
+           
+                
+          
         </div>
     </div>
 </section>
 </div>
+</body>
 {% endblock %}
 {% block script %}
 <script>

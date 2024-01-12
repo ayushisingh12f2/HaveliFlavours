@@ -20,7 +20,7 @@ h6 {
 a {
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
-    color: #fbaf32;
+    color: white;
     transition: .3s;
 }
 
@@ -476,7 +476,7 @@ a:focus {
 }
 
 .booking .booking-content {
-    padding: 45px 0 15px 0;
+    padding: 45px 50px 15px 0;
 }
 
 .booking .booking-content .section-header {
@@ -506,22 +506,22 @@ a:focus {
 .booking .booking-form .form-control {
     height: 45px;
     font-size: 14px;
-    color: #ffffff;
+    color:#666666;
     padding: 0 15px;
     border-radius: 5px !important;
-    border: 1px solid #ffffff;
+    border: 1px solid #989595;
     background: transparent;
 }
 
+
+
+.booking .booking-form .form-control::placeholder {
+    color:#666666;
+    opacity: 1;
+}
 .booking .booking-form select.form-control {
     padding: 0 10px;
 }
-
-.booking .booking-form .form-control::placeholder {
-    color: #ffffff;
-    opacity: 1;
-}
-
 .booking .booking-form .form-control:-ms-input-placeholder,
 .booking .booking-form .form-control::-ms-input-placeholder {
     color: #ffffff;
@@ -884,6 +884,7 @@ a:focus {
     background: #fbaf32;
     border-radius: 5px;
     margin: 0 5px;
+    color:#ffffff;
 }
 
 .menu .menu-tab .nav.nav-pills .nav-link:hover,

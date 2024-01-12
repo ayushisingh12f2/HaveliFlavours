@@ -43,7 +43,7 @@
                         <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
                         <a href="{% url 'team' %}" class="nav-item nav-link">Chef</a>
                         <a href="{% url 'all_dishes' %}" class="nav-item nav-link">Menu</a>
-                        <a href="{% url 'all_dishes' %}" class="nav-item nav-link">Booking</a>
+                        <a href="{% url 'booking' %}" class="nav-item nav-link">Booking</a>
                         <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
                         {% if user.is_authenticated %}
                         <div class="nav-item dropdown">
@@ -83,7 +83,7 @@
                                     <p><i class="fa fa-envelope"></i>info@example.com</p>
                                     <div class="footer-social">
                                         <a href=""><i class="fab fa-twitter"></i></a>
-                                        <a href="https://www.facebook.com/SachTechSol/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                         <a href=""><i class="fab fa-youtube"></i></a>
                                         <a href=""><i class="fab fa-instagram"></i></a>
                                         <a href=""><i class="fab fa-linkedin-in"></i></a>
@@ -109,9 +109,9 @@
                                 Indulge in a flavourful experience with our Foodie Newsletter! Stay updated with the latest
                                 culinary delights, tempting offers, and exciting updates from Haveli Flavors
                             </p>
-                            <div class="form">
+                            <div class="form" >
                                 <input class="form-control" placeholder="Email">
-                                <button class="btn custom-btn">Submit</button>
+                                <button class="btn custom-btn" onclick="func()">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -143,6 +143,11 @@
 
         <!-- Template Javascript -->
         <script src="/static/js/main.js"></script>
-        {% block script %}{% endblock %}
+        {% block script %}
+        <script>
+            function func(){alert("Thanks!!!");}
+        </script>
+        {% endblock %}
     </body>
+
 </html>

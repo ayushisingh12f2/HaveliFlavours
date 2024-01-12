@@ -83,3 +83,16 @@ class Order(models.Model):
 
     class Meta:
         verbose_name_plural = "Order Table"
+
+class Book_Table(models.Model):
+    name=models.CharField(max_length=50)
+    email=models.CharField(max_length=100)
+    mob=models.CharField(max_length=100)
+    date=models.CharField(max_length=100)
+    time=models.CharField(max_length=100)
+    number_guests=models.CharField(max_length=100)
+    added_on = models.DateTimeField(auto_now_add=True)
+    is_approved = models.BooleanField(default=False)
+    
+    class Meta:
+        verbose_name_plural = "Table_Bookings"
